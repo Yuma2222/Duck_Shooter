@@ -18,6 +18,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class DuckButton extends Button {
     private AtomicInteger lives;
     private PathTransition transition = new PathTransition();
+
     public DuckButton(AtomicInteger lives) {
         this.lives = lives;
         this.setBackground(Background.EMPTY);
@@ -60,9 +61,9 @@ public class DuckButton extends Button {
         transition.play();
     }
 
-    public Polyline createPolyLine(){
+    public Polyline createPolyLine() {
         Polyline polyline = new Polyline();
-        double y = new Random().nextFloat(300);
+        double y = new Random().nextFloat(400);
         polyline.getPoints().addAll(-1100.0, y, 1500.0, y);
 
         return polyline;
@@ -73,6 +74,7 @@ public class DuckButton extends Button {
         try {
             transition.stop();
             ((Pane) this.getParent()).getChildren().remove(this);
-        }catch (Exception ignored){}
+        } catch (Exception ignored) {
+        }
     }
 }

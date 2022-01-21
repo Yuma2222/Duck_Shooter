@@ -72,7 +72,7 @@ public class DuckShooter extends Application {
     }
 
     public void areWeDead() {
-        if (CONFIG.CONFIG.LIVES <= 1) {
+        if (CONFIG.CONFIG.LIVES < 1) {
             timeline.stop();
             StackPane endGamePane = new StackPane();
             endGamePane.getChildren().add(returnHighScoresButton());

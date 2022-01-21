@@ -4,7 +4,7 @@ import lombok.Getter;
 
 @Getter
 public enum CONFIG {
-    CONFIG(1);
+    CONFIG(10);
 
     public int LIVES;
 
