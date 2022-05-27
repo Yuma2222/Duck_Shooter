@@ -24,7 +24,9 @@ public class DuckButton extends Button {
         this.setBackground(Background.EMPTY);
         this.setOnMouseClicked(mouseEvent -> {
             lives.getAndDecrement();
-
+            if(CONFIG.CONFIG.LIVES < 5){
+                lives.getAndDecrement();
+            }
             if (lives.get() > 0) {
                 updateImageView();
             } else {
